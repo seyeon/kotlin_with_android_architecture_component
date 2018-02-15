@@ -23,7 +23,9 @@ import android.widget.TextView
 
 import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
+import android.databinding.DataBindingUtil
 import com.minsfactory.kotlinwithaac.R
+import com.minsfactory.kotlinwithaac.databinding.ActivityLoginBinding
 
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -36,9 +38,13 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
      */
     private var mAuthTask: UserLoginTask? = null
 
+    private lateinit var binding : ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = DataBindingUtil.setContentView(this@LoginActivity, R.layout.activity_login)
+        binding.activity = this@LoginActivity
+
         // Set up the login form.
         populateAutoComplete()
         password.setOnEditorActionListener(TextView.OnEditorActionListener { _, id, _ ->
