@@ -6,13 +6,13 @@
     <data>
         <variable
             name="parentActivity"
-            type="com.minsfactory.kotlinwithandroidarchitecturecomponent.presenters.main.MainActivity"/>
+            type="com.minsfactory.kotlinwithaac.presenters.main.MainActivity"/>
     </data>
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.minsfactory.kotlinwithandroidarchitecturecomponent.presenters.main.MainActivity">
+        tools:context="com.minsfactory.kotlinwithaac.presenters.main.MainActivity">
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"

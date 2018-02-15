@@ -1,4 +1,4 @@
-package com.minsfactory.kotlinwithandroidarchitecturecomponent
+package com.minsfactory.kotlinwithaac
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

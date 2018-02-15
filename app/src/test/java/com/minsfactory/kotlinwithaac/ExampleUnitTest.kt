@@ -1,4 +1,4 @@
-package com.minsfactory.kotlinwithandroidarchitecturecomponent
+package com.minsfactory.kotlinwithaac
 
 import org.junit.Test
 

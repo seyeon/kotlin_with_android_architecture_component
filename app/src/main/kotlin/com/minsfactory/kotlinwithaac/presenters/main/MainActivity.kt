@@ -1,4 +1,4 @@
-package com.minsfactory.kotlinwithandroidarchitecturecomponent.presenters.main
+package com.minsfactory.kotlinwithaac.presenters.main
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -9,11 +9,9 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import com.minsfactory.kotlinwithandroidarchitecturecomponent.R
-import com.minsfactory.kotlinwithandroidarchitecturecomponent.R.layout.app_bar_main
-import com.minsfactory.kotlinwithandroidarchitecturecomponent.databinding.ActivityMainBinding
-import com.minsfactory.kotlinwithandroidarchitecturecomponent.databinding.AppBarMainBinding
+import com.minsfactory.kotlinwithaac.R
+import com.minsfactory.kotlinwithaac.databinding.ActivityMainBinding
+import com.minsfactory.kotlinwithaac.databinding.AppBarMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
