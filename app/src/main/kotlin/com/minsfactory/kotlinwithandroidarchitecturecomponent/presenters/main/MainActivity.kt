@@ -1,5 +1,6 @@
-package com.minsfactory.kotlinwithandroidarchitecturecomponent
+package com.minsfactory.kotlinwithandroidarchitecturecomponent.presenters.main
 
+import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -8,20 +9,30 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import com.minsfactory.kotlinwithandroidarchitecturecomponent.R
+import com.minsfactory.kotlinwithandroidarchitecturecomponent.R.layout.app_bar_main
+import com.minsfactory.kotlinwithandroidarchitecturecomponent.databinding.ActivityMainBinding
+import com.minsfactory.kotlinwithandroidarchitecturecomponent.databinding.AppBarMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private lateinit var binding : ActivityMainBinding
+    private lateinit var appbarBinding: AppBarMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
+        binding.activity = this@MainActivity
+        binding.appbar?.parentActivity = this
+
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-        }
-
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
+//        }
         val toggle = ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
@@ -78,5 +89,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun floatingButtonOnClick() {
+//        Toast.makeText(this@MainActivity, "FloatingButtonOnClick", Toast.LENGTH_LONG).show()
+        Snackbar.make(fab, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
     }
 }
